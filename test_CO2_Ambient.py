@@ -288,8 +288,8 @@ while True:
                         Am_err = 0
                         am_tc = utime.time()
                         r.close()
-                    except:
-                        print('Ambient send ERR! / ' + str(Am_err))
+                    except Exception as e:
+                        print('Ambient send ERR! / ' + str(e) + ' / ' + str(Am_err))
                         Am_err = Am_err + 1
         utime.sleep(1)
     
